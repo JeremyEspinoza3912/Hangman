@@ -1,30 +1,30 @@
 import csv
 import random 
 words = csv.reader('words.csv')
-word = words.lower 
-#it was at this point where i alomst threw my computer because it kept saying word wasnt defined even though it has 5,000 WORD IN IT SO HOW IS IT NOT DEFNIED
+word = list(words).lower()[:-1]
+
 
 class Game:
   secret_word = random.choice(list(word))
   def guess():
+   blanks = ('_' for letter in secret_word)
     player_guess = input("Your guess")
     if player_guess in secret_word:
-      #this is where im supposed to replace the balnk with the letter except i have no clue how which is great
+      for idx,letter in enumurate(secret_word):
+        if letter == player_guess :
+          progress[idx] = player_guess
     elif:
         if player_guess not in secret_word:
           attempts_left = attempts - 1
          print(attempts_left)
          print(f'Try again buck0')
-#pretty sure the computer opponet is supposed to be under Game as well but i dont know how to code it
-
     
 class Player:
   def init(self.players = 1,attempts = 8)
        self.players = players
-  def player()
+  def name()
     player_name = input("Enter the name you wish to go by")
-  #I'm not sure how but i know that it can be played with a  bot 
-
+  
     
 class Gallows:
   def hang():
@@ -36,5 +36,3 @@ class Gallows:
             gallows[i] += next(parts)
             yield '\n'.join(gallows)
     raise StopIteration
-    #somehow i couldnt even get this to work becuase it kept coming out wrong for me so at this point i also almost threw my laptop woop
-    
