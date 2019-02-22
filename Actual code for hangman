@@ -1,22 +1,18 @@
 import csv
 import random 
 words = csv.reader('words.csv')
+word = words.lower 
 
 
 class Game:
+  secret_word = random.choice(list(word))
   def guess():
     player_guess = input("Your guess")
-
-
-
-
-
-
-
-
-
-
-
+    if player_guess in secret_word:
+      
+    
+    
+    
 class Gallows:
   def hang():
     gallows = [',--;-', '| ', '| ', '| ', '| ', '| ', '|_____']
